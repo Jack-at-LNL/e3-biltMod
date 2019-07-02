@@ -1,0 +1,17 @@
+>>
+Script is used     : e3TemplateGenerator.bash
+Script Path        : /home/maurogiacchini/ics_gitsrc/e3-tools/e3TemplateGenerator
+User               : maurogiacchini
+Log Time           : 2019Jul02-0855-45CEST
+e3 repo Hash       : aacac5a
+
+>>
+>> Your sources are located in e3-biltMod.
+>> 
+EPICS_MODULE_NAME  : biltMod
+E3_MODULE_SRC_PATH : biltMod
+E3_TARGET_URL      : https://github.com/Jack-at-LNL
+>> 
+e3 module name     : e3-biltMod
+e3 target url full : https://github.com/Jack-at-LNL/e3-biltMod.git
+>> 
