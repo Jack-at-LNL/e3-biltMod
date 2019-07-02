@@ -48,6 +48,9 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 ## Exclude linux-ppc64e6500
 ##EXCLUDE_ARCHS = linux-ppc64e6500
 
+#MG
+APP:=biltModApp
+APPDB:=$(APP)/Db
 
 # APP:=calcApp
 # APPDB:=$(APP)/Db
@@ -62,6 +65,13 @@ include $(E3_REQUIRE_CONFIG)/DECOUPLE_FLAGS
 # USR_CPPFLAGS += -Wno-unused-variable
 # USR_CPPFLAGS += -Wno-unused-function
 # USR_CPPFLAGS += -Wno-unused-but-set-variable
+
+#MG
+# TEMPLATES += $(wildcard $(APPDB)/*.db)
+TEMPLATES += $(wildcard $(APPDB)/*.db)
+TEMPLATES += $(wildcard $(APPDB)/*.proto)
+TEMPLATES += $(wildcard $(APPDB)/*.template)
+
 
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
 # TEMPLATES += $(wildcard $(APPDB)/*.db)
