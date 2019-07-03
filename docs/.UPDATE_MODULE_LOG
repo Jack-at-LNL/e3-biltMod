@@ -1,0 +1,14 @@
+
+>>
+Update Log Time    : 2019Jul02-0928-50CEST
+>>
+Script is used     : e3TemplateGenerator.bash
+Script Path        : /home/maurogiacchini/ics_gitsrc/e3-tools/e3TemplateGenerator
+User               : maurogiacchini
+e3 repo Hash       : aacac5a
+
+EPICS_MODULE_NAME  :                            biltMod
+E3 MODULE VERSION  :                             master
+EPICS BASE VERSION :                        base-3.15.5
+E3 REQUIRE VERSION :                              3.0.5
+>>

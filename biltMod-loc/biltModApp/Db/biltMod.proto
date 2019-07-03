@@ -1,0 +1,93 @@
+#  The program is free software: you can redistribute
+#  it and/or modify it under the terms of the GNU General Public License
+#  as published by the Free Software Foundation, either version 2 of the
+#  License, or any newer version.
+#
+#  This program is distributed in the hope that it will be useful, but WITHOUT
+#  ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+#  FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+#  more details.
+#
+#  You should have received a copy of the GNU General Public License along with
+#  this program. If not, see https://www.gnu.org/licenses/gpl-2.0.txt
+#
+#
+#  Original protocol author : Pete Owens (Science and Tecnology Facility Council UK) 
+#  INFN-LNL specific author : Mauro Giacchini
+#                    email  : mauro.giacchini@lnl.infn.it
+#
+#
+terminator   = LF;
+replytimeout = 1000;
+readtimeout  = 1000;
+
+getName    
+{ 
+	out "i\$1"; 
+	out "DEF?";        
+	in "%30c";  
+}
+
+getState   
+{ 
+	out "i\$1"; 
+	out "STATE?";      
+	in "%i";    
+}
+
+setState   
+{ 
+	out "i\$1"; 
+	out "STATE %1d";               
+}
+
+setClear   
+{
+	out "i\$1"; 
+	out "STATE:CLEAR";             
+}
+
+getSetCurr 
+{ 
+	out "i\$1"; 
+	out "CURR?";       
+	in "%g";    
+}
+
+setCurr 
+{ 
+	out "i\$1"; 
+	out "CURR %.5f";               
+}
+
+
+getCurr    
+{ 
+	out "i\$1"; 
+	out "MEAS:CURR?";  
+	in "%g";    
+}
+
+getVolt    
+{
+	out "i\$1"; 
+	out "MEAS:VOLT?";  
+	in "%g";    
+}
+
+#setGroup  { out "p\$1:DEF;INST:LIST \$2,\$3"; }
+
+getFail   
+{ 
+	out "i\$1"; 
+	out "IDAT?";  
+	in "M\$1,%*i,%[^,],%*s";    
+}
+
+# for quickly testing new commands
+debug 
+{
+	ExtraInput = Ignore;
+	out "%s"; 
+	in "%39c";
+}
