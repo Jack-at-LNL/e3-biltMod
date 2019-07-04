@@ -44,7 +44,7 @@ record (stringout, "$(AREASTRUCTURE):$(DEVICENAME):Debug")
 
 ########## COMMON ###############################################################
 
-record (stringin, "$(AREASTRUCTURE):$(DEVICENAME):ModNameRB$(MODULE)")
+record (stringin, "$(AREASTRUCTURE):$(DEVICENAME):ModNameR$(MODULE)")
 {
     field (DESC, "GET MODULE NAME")
     field (DTYP, "stream")
@@ -52,7 +52,7 @@ record (stringin, "$(AREASTRUCTURE):$(DEVICENAME):ModNameRB$(MODULE)")
     field (SCAN, "10 second")
 }
 
-record (mbbi, "$(AREASTRUCTURE):$(DEVICENAME):ModStatRB$(MODULE)")
+record (mbbi, "$(AREASTRUCTURE):$(DEVICENAME):ModStatR$(MODULE)")
 {
     field (DESC, "GET SUPPLY STATUS OF MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -66,7 +66,7 @@ record (mbbi, "$(AREASTRUCTURE):$(DEVICENAME):ModStatRB$(MODULE)")
     field (THSV, "MAJOR")
 }
 
-record (bo, "$(AREASTRUCTURE):$(DEVICENAME):SetClear$(MODULE)")
+record (bo, "$(AREASTRUCTURE):$(DEVICENAME):ClearS$(MODULE)")
 {
     field (DESC, "CLEAR STATE OF MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -74,7 +74,7 @@ record (bo, "$(AREASTRUCTURE):$(DEVICENAME):SetClear$(MODULE)")
     field (ZNAM, "Clear")
 }
 
-record (bo, "$(AREASTRUCTURE):$(DEVICENAME):StateSet$(MODULE)")
+record (bo, "$(AREASTRUCTURE):$(DEVICENAME):StateS$(MODULE)")
 {
     field (DESC, "SET STATUS OF MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -86,7 +86,7 @@ record (bo, "$(AREASTRUCTURE):$(DEVICENAME):StateSet$(MODULE)")
 
 ################################################################################
 
-record (ao, "$(AREASTRUCTURE):$(DEVICENAME):SetCurr$(MODULE)")
+record (ao, "$(AREASTRUCTURE):$(DEVICENAME):CurS$(MODULE)")
 {
     field (DESC, "SET CURRENT OF MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -99,7 +99,7 @@ record (ao, "$(AREASTRUCTURE):$(DEVICENAME):SetCurr$(MODULE)")
     field (HOPR, "$(MAXCURRENT)")
 }
 
-record (ai, "$(AREASTRUCTURE):$(DEVICENAME):SetCurrRB$(MODULE)")
+record (ai, "$(AREASTRUCTURE):$(DEVICENAME):CurSR$(MODULE)")
 {
     field (DESC, "READ CURRENT SETUP OF MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -119,7 +119,7 @@ record (ai, "$(AREASTRUCTURE):$(DEVICENAME):SetCurrRB$(MODULE)")
     field (HHSV, "MAJOR")
 }
 
-record (ai, "$(AREASTRUCTURE):$(DEVICENAME):GetCurr$(MODULE)")
+record (ai, "$(AREASTRUCTURE):$(DEVICENAME):CurR$(MODULE)")
 {
     field (DESC, "READ CURRENT ON MODULE $(MODULE)")
     field (DTYP, "stream")
@@ -140,7 +140,7 @@ record (ai, "$(AREASTRUCTURE):$(DEVICENAME):GetCurr$(MODULE)")
 }
 
 
-record (ai, "$(AREASTRUCTURE):$(DEVICENAME):GetVolt$(MODULE)")
+record (ai, "$(AREASTRUCTURE):$(DEVICENAME):VolR$(MODULE)")
 {
     field (DESC, "READ CURRENT VOLTAGE ON MODULE $(MODULE)")
     field (DTYP, "stream")
